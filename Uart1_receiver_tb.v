@@ -37,7 +37,7 @@ module Uart1_receiver_tb();
         $stop;
     end
 
-    always #10 Clk = !Clk; // 时钟周期为20ns，50MHz
+    always #10 Clk = !Clk; //cycle 20
 
     always @(posedge Clk) begin
         if (counter == counter_Baud)
@@ -46,6 +46,6 @@ module Uart1_receiver_tb();
             counter <= counter + 1;
 
         if (counter == 0)
-            data <= {data[0], data[25:1]}; // 右移一位，填充停止位
+            data <= {data[0], data[25:1]}; // move to right hand side
     end
 endmodule
