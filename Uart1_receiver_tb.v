@@ -28,7 +28,7 @@ module Uart1_receiver_tb();
     initial begin
         Clk = 0;
         data1 = 8'b1110_0101;
-        data = {1'b1, data1, 1'b0, 16'hffff}; // 起始位(0) + 数据位 + 停止位(1)
+        data = {1'b1, data1, 1'b0, 16'hffff}; // idle, start, data,stop 
         Reset_n = 0;
         counter = 0;
         #17;
