@@ -9,7 +9,7 @@ module Uart1_receiver_tb();
 
     reg [25:0] data;
     reg [7:0] data1;
-    reg [12:0] counter; // 扩展计数器宽度以匹配波特率
+    reg [12:0] counter; // counte baud rates
 
     parameter MCNT = 50_000_000;
     parameter Baud = 9600;
